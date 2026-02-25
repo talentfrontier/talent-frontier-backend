@@ -8,6 +8,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/auth");
 const jobRoutes = require("./routes/jobs");
 const cvRoutes = require("./routes/cv");
+const applicationRoutes = require("./routes/applications");
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/jobs", jobRoutes);
 app.use("/api/cv", cvRoutes);
+app.use("/api/applications", applicationRoutes);
 
 // 404 handler (optional but professional)
 app.use((req, res) => {
