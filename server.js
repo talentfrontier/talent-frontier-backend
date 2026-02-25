@@ -7,6 +7,7 @@ const cors = require("cors");
 // Import routes
 const authRoutes = require("./routes/auth");
 const jobRoutes = require("./routes/jobs");
+const cvRoutes = require("./routes/cv");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 // API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/jobs", jobRoutes);
+app.use("/api/cv", cvRoutes);
 
 // 404 handler (optional but professional)
 app.use((req, res) => {
